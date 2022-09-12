@@ -13,9 +13,9 @@ x(n) into L-length blocks and convolve each L-block with h(n) (using linear conv
 the convolution outcomes along the L-boundaries (we elaborate more soon). This works because of the
 additive property of convolution which states (x1(n) + x2(n)) * h(n) = x1(n) * h(n) + x2(n) * h(n)
 
-![](images/3.png)
-![](images/4.png)
-![](images/5.png)
+![](../images/3.png)
+![](../images/4.png)
+![](../images/5.png)
 # The Overlap-Save method 
 is a bit more difficult to explain than the Overlap-Add method as it is
 based, in part, on the concept of circular convolution which in this context results in time-domain
@@ -37,14 +37,14 @@ goals is to conduct a linear convolution (but using the FFT), this overlap is es
 beginning of the windowed sequence as shown in Figure 4. In general the points at n = 0, 1, 2, …, M-2
 will be corrupt from what we call time-domain “self-aliasing”. However, the remaining points at n = M-1,
 M-2, M-3, …, N-1 will still be equal to the desired yL,k(n).
-![](images/6.png)
-![](images/7.png)
+![](../images/6.png)
+![](../images/7.png)
 
 
 # LinearConvolution 
 Linear convolution gives the output we get after passing the input through a system ( eg. filter). So, if the impulse response of a system is known, then the response for any input can be determined using convolution operation.
 Circular convolution utilises the periodicity of samples in DFT and hence gives the result efficiently. But as we require the output we get by linear convolution, we padd the input or impulse response whatever is short with zeros called zero padding.
 The efficiency of circular convolution is utilised in many algorithms to find DFT digitally , the most common algorithm is FFT( fast fourier transform).
-![](images/2.png)
-![](images/2.11.png)
-![](images/1.png)
+![](../images/2.png)
+![](../images/2.11.png)
+![](../images/1.png)
